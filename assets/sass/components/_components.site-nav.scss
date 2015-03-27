@@ -1,0 +1,32 @@
+.main-navigation {
+	width:800px;
+	float:left;
+}
+
+	.primary_navigation{
+		margin:0;
+		padding:0;
+		list-style:none;
+
+		li {
+			display:inline-block;
+
+			a {
+				color: #333;
+				padding:10px 16px;
+			}
+		}
+
+
+	}
+
+
+.dropdown-menu {
+	margin:0;
+	padding:0;
+	list-style:none;
+
+	li {
+		display: none;
+	}
+}

@@ -1,0 +1,1429 @@
+/*------------------------------------*\
+    #CSSWIZARDRY
+\*------------------------------------*/
+/**
+ * CONTENTS
+ *
+ * SETTINGS
+ * Default..............inuitcss’ default settings.
+ * Global...............Globally-available variables and settings/config.
+ * Colors...............Manage our color palette in isolation.
+ * Responsive...........Set up and name our breakpoints.
+ *
+ * TOOLS
+ * Functions............inuitcss’ default functions.
+ * Mixins...............inuitcss’ default mixins.
+ * Mixins...............Our extension of inuitcss’ mixins.
+ * Responsive...........Responsive tooling (requires responsive settings).
+ * Aliases..............Aliases onto longer inuitcss variables and mixins.
+ *
+ * GENERIC
+ * Normalize.css........A level playing field.
+ * Reset................A pared back reset to remove margins.
+ * Box-sizing...........Better default `box-sizing`.
+ * Shared...............Sensibly and tersely share global commonalities.
+ *
+ * BASE
+ * Page.................Page-level styles (HTML element).
+ * Page.................Our extension of the inuitcss page module.
+ * Headings.............Heading styles
+ * Type.................Misc type styles
+ * Links................Hyperlink styles
+ * Lists................inuitcss list styles
+ * Images...............inuitcss images
+ * Quotes...............Styling for blockquotes, etc.
+ *
+ * OBJECTS
+ * Wrappers.............Wrappers and page constraints.
+ * Buttons..............inuitcss’ buttons module.
+ * Layout...............inuitcss’ layout tool.
+ * Box..................inuitcss’ box object.
+ * Media................The media object.
+ * Flag.................The flag object.
+ * UI list..............inuitcss’ UI list.
+ *
+ * COMPONENTS
+ * 
+ *
+ * TRUMPS
+ * Clearfix.............I can’t believe we still need this in 2014.
+ * Widths...............Simple width helper classes.
+ * Widths-responsive....Polyfill for responsive width classes.
+ * Spacing..............Micro-level spacing.
+ * Show/hide............Helpers to show and side stuff.
+ */
+/**
+ * #SETTINGS
+ */
+/*!
+ * inuitcss, by @csswizardry
+ *
+ * github.com/inuitcss | inuitcss.com
+ */
+/**
+ * #TOOLS
+ */
+/*------------------------------------*\
+    #ALIASES
+\*------------------------------------*/
+/**
+ * #GENERIC
+ */
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 9, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%
+  /* 2 */ }
+
+/**
+ * Remove default margin.
+ */
+/* line 19, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+body {
+  margin: 0; }
+
+/* HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+/* line 45, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+/* line 57, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+audio, canvas, progress, video {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline
+  /* 2 */ }
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 67, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+/* line 78, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+[hidden], template {
+  display: none; }
+
+/* Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+/* line 89, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+a {
+  background-color: transparent; }
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 98, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+a:active, a:hover {
+  outline: 0; }
+
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+/* line 109, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+/* line 118, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+b, strong {
+  font-weight: bold; }
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+/* line 126, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+dfn {
+  font-style: italic; }
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+/* line 135, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 144, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 153, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+small {
+  font-size: 80%; }
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 162, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 169, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+sup {
+  top: -0.5em; }
+
+/* line 173, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+sub {
+  bottom: -0.25em; }
+
+/* Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+/* line 184, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+img {
+  border: 0; }
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+/* line 192, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* Grouping content
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+/* line 203, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+figure {
+  margin: 1em 40px; }
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 211, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+hr {
+  box-sizing: content-box;
+  height: 0; }
+
+/**
+ * Contain overflow in all browsers.
+ */
+/* line 221, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+pre {
+  overflow: auto; }
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+/* line 232, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+code, kbd, pre, samp {
+  font-family: monospace, monospace;
+  font-size: 1em; }
+
+/* Forms
+   ========================================================================== */
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+/* line 256, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+button, input, optgroup, select, textarea {
+  color: inherit;
+  /* 1 */
+  font: inherit;
+  /* 2 */
+  margin: 0
+  /* 3 */ }
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+/* line 266, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+button {
+  overflow: visible; }
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+/* line 278, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+button, select {
+  text-transform: none; }
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 293, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer
+  /* 3 */ }
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 303, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+button[disabled], html input[disabled] {
+  cursor: default; }
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 312, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 322, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+input {
+  line-height: normal; }
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+/* line 335, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0
+  /* 2 */ }
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+/* line 347, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+input[type="number"]::-webkit-inner-spin-button, input[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 357, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  /* 2 */
+  box-sizing: content-box; }
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+/* line 371, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 379, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 390, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0
+  /* 2 */ }
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+/* line 399, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+textarea {
+  overflow: auto; }
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+/* line 408, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+optgroup {
+  font-weight: bold; }
+
+/* Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 419, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* line 425, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-normalize/generic.normalize */
+td, th {
+  padding: 0; }
+
+/*------------------------------------*\
+    #RESET
+\*------------------------------------*/
+/**
+ * As well as using normalize.css, it is often advantageous to remove all
+ * margins from certain elements.
+ */
+/* line 16, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-reset/generic.reset */
+body, h1, h2, h3, h4, h5, h6, p, blockquote, pre, dl, dd, ol, ul, form, fieldset, legend, figure, table, th, td, caption, hr {
+  margin: 0;
+  padding: 0; }
+
+/**
+ * Give a help cursor to elements that give extra info on `:hover`.
+ */
+/* line 29, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-reset/generic.reset */
+abbr[title], dfn[title] {
+  cursor: help; }
+
+/**
+ * Remove underlines from potentially troublesome elements.
+ */
+/* line 41, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-reset/generic.reset */
+u, ins {
+  text-decoration: none; }
+
+/**
+ * Apply faux underlines to inserted text via `border-bottom`.
+ */
+/* line 52, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-reset/generic.reset */
+ins {
+  border-bottom: 1px solid; }
+
+/*------------------------------------*\
+    #BOX-SIZING
+\*------------------------------------*/
+/**
+ * Set the global `box-sizing` state to `border-box`.
+ *
+ * css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice
+ * paulirish.com/2012/box-sizing-border-box-ftw
+ */
+/* line 11, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-box-sizing/generic.box-sizing */
+html {
+  box-sizing: border-box; }
+
+/* line 21, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-box-sizing/generic.box-sizing */
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+/*------------------------------------*\
+    #SHARED
+\*------------------------------------*/
+/**
+ * Where `margin-bottom` is concerned,this value will be the same as the
+ * base line-height. This allows us to keep a consistent vertical rhythm.
+ * As per: csswizardry.com/2012/06/single-direction-margin-declarations
+ */
+/* line 17, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-shared/generic.shared */
+h1, h2, h3, h4, h5, h6, ul, ol, dl, blockquote, p, address, hr, table, fieldset, figure, pre {
+  margin-bottom: 24px;
+  margin-bottom: 1.5rem; }
+
+/**
+ * Where `margin-left` is concerned we want to try and indent certain elements
+ * by a consistent amount. Define that amount once,here.
+ */
+/* line 31, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-shared/generic.shared */
+ul, ol, dd {
+  margin-left: 48px;
+  margin-left: 3rem; }
+
+/**
+ * #BASE
+ */
+/*------------------------------------*\
+    #HEADINGS
+\*------------------------------------*/
+/**
+ * Headings 1–6.
+ */
+/* line 17, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-headings/base.headings */
+h1 {
+  font-size: 36px;
+  font-size: 2.25rem;
+  line-height: 1.333333333; }
+
+/* line 21, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-headings/base.headings */
+h2 {
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 1.6; }
+
+/* line 25, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-headings/base.headings */
+h3 {
+  font-size: 24px;
+  font-size: 1.5rem;
+  line-height: 1; }
+
+/* line 29, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-headings/base.headings */
+h4 {
+  font-size: 20px;
+  font-size: 1.25rem;
+  line-height: 1.2; }
+
+/* line 33, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-headings/base.headings */
+h5 {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5; }
+
+/* line 37, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-headings/base.headings */
+h6 {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.714285714; }
+
+/*------------------------------------*\
+    #PARAGRAPHS
+\*------------------------------------*/
+/**
+ * The `.lede` class is used to make the introductory text (usually a paragraph)
+ * of a document slightly larger: en.wikipedia.org/wiki/Lede_(news)
+ */
+/* line 13, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-paragraphs/base.paragraphs */
+.lede {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.333333333; }
+
+/*------------------------------------*\
+    #LISTS
+\*------------------------------------*/
+/**
+ * Remove extra vertical spacing when nesting lists.
+ */
+/* line 11, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-lists/base.lists */
+li > ul, li > ol {
+  margin-bottom: 0; }
+
+/*------------------------------------*\
+    #IMAGES
+\*------------------------------------*/
+/**
+ * 1. Fluid images for responsive purposes.
+ * 2. Offset `alt` text from surrounding copy.
+ * 3. Setting `vertical-align` removes the whitespace that appears under `img`
+ *    elements when they are dropped into a page as-is. Safer alternative to
+ *    using `display: block;`.
+ */
+/* line 12, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-images/base.images */
+img {
+  max-width: 100%;
+  /* [1] */
+  font-style: italic;
+  /* [2] */
+  vertical-align: middle
+  /* [3] */ }
+
+/**
+ * 1. Google Maps breaks if `max-width: 100%` acts upon it; use their selector
+ *    to remove the effects.
+ * 2. If a `width` and/or `height` attribute have been explicitly defined, let’s
+ *    not make the image fluid.
+ */
+/* line 28, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-images/base.images */
+.gm-style img, img[width], img[height] {
+  /* [2] */
+  max-width: none; }
+
+/*------------------------------------*\
+    #PAGE
+\*------------------------------------*/
+/**
+ * High-, page-level styling.
+ *
+ * 1. Set the default `font-size` and `line-height` for the entire project,
+ *    sourced from our default variables. The `font-size` is calculated to exist
+ *    in ems, the `line-height` is calculated to exist unitlessly.
+ * 2. Force scrollbars to always be visible to prevent awkward ‘jumps’ when
+ *    navigating between pages that do/do not have enough content to produce
+ *    scrollbars naturally.
+ * 3. Ensure the page always fills at least the entire height of the viewport.
+ * 4. Prevent certain mobile browsers from automatically zooming fonts.
+ * 5. Fonts on OSX will look more consistent with other systems that do not
+ *    render text using sub-pixel anti-aliasing.
+ */
+/* line 19, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-page/base.page */
+html {
+  font-size: 1em;
+  /* [1] */
+  line-height: 1.5;
+  /* [1] */
+  background-color: #f9f9f9;
+  color: #333;
+  overflow-y: scroll;
+  /* [2] */
+  min-height: 100%;
+  /* [3] */
+  -webkit-text-size-adjust: 100%;
+  /* [4] */
+  -ms-text-size-adjust: 100%;
+  /* [4] */
+  -moz-osx-font-smoothing: grayscale;
+  /* [5] */
+  -webkit-font-smoothing: antialiased
+  /* [5] */ }
+
+/*------------------------------------*\
+    #PAGE
+\*------------------------------------*/
+/* line 5, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/base/base.page */
+html {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300; }
+
+/*------------------------------------*\
+    #TYPE
+\*------------------------------------*/
+/**
+ * Typographical base selectors.
+ */
+/**
+ * Headings 1–6.
+ */
+/* line 54, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/tools.mixins */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 300;
+  color: #f43059; }
+
+/**
+ * A generic heading style which can be applied to any headings.
+ */
+/* line 24, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/base/base.type */
+.heading {
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 1.090909091; }
+
+/* line 28, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/base/base.type */
+.heading-sub {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 600;
+  margin-bottom: 0;
+  color: #333; }
+
+/**
+ * Emboldened elements.
+ */
+/* line 44, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/base/base.type */
+a, strong, b, dt {
+  font-weight: 600; }
+
+/**
+ * Code-like elements.
+ */
+/* line 55, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/base/base.type */
+code, kbd, samp {
+  color: #859900;
+  font-family: Inconsolata, Monaco, Consolas, "Andale Mono", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace; }
+
+/* line 60, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/base/base.type */
+pre {
+  white-space: pre;
+  word-wrap: normal;
+  overflow: auto;
+  padding: 12px;
+  background-color: #333;
+  border-radius: 3px; }
+  /* line 69, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/base/base.type */
+  pre, pre code, pre kbd, pre samp {
+    color: #fff; }
+
+/**
+ * Figures.
+ *
+ * 1. Outdent figures by an arbitrary amount at the relevant viewport size.
+ * 2. Reindent figcaptions.
+ */
+@media screen and (min-width: 1380px) {
+  figure {
+    margin-left: -128px
+    /* [1] */ } }
+/* line 91, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/base/base.type */
+figure > img {
+  border-radius: 3px; }
+
+/* line 97, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/base/base.type */
+figcaption {
+  font-size: 12px;
+  font-size: 0.75rem;
+  line-height: 2; }
+  @media screen and (min-width: 1380px) {
+    figcaption {
+      margin-left: 128px
+      /* [2] */ } }
+
+/**
+ * Horizontal rules.
+ */
+/* line 113, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/base/base.type */
+hr {
+  border: none;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 23px; }
+
+/**
+ * Highlighted text.
+ */
+/* line 128, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/base/base.type */
+pre mark {
+  background: none;
+  border-bottom: 1px solid;
+  color: inherit; }
+
+/**
+ * Text-alignment.
+ */
+/* line 143, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/base/base.type */
+.text-banner {
+  text-align: center; }
+
+/*------------------------------------*\
+    #LINKS
+\*------------------------------------*/
+/* line 5, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/base/base.links */
+a {
+  text-decoration: none;
+  color: #f43059; }
+  /* line 30, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/tools.mixins */
+  a:hover, a:active, a:focus {
+    text-decoration: underline; }
+
+/* line 25, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/base/base.links */
+.link-secret {
+  color: inherit;
+  font-weight: 300; }
+  /* line 30, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/tools.mixins */
+  .link-secret:hover, .link-secret:active, .link-secret:focus {
+    color: #f43059;
+    text-decoration: none; }
+
+/*------------------------------------*\
+    #QUOTES
+\*------------------------------------*/
+/**
+ * Inline quotes.
+ *
+ */
+/* line 9, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/base/base.quotes */
+q {
+  font-style: italic;
+  quotes: "‘" "’" "“" "”"; }
+  /* line 13, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/base/base.quotes */
+  q:before {
+    content: open-quote; }
+  /* line 17, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/base/base.quotes */
+  q:after {
+    content: close-quote; }
+
+/**
+ * Block quotes.
+ *
+ * 1. Hang opening punctuation.
+ */
+/* line 32, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/base/base.quotes */
+blockquote {
+  text-indent: -0.41em;
+  /* [1] */
+  quotes: "“" "”"; }
+  /* line 38, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/base/base.quotes */
+  blockquote p:before {
+    content: open-quote; }
+  /* line 42, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/base/base.quotes */
+  blockquote p:after {
+    content: no-close-quote; }
+  /* line 46, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/base/base.quotes */
+  blockquote p:last-of-type {
+    margin-bottom: 0; }
+    /* line 49, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/base/base.quotes */
+    blockquote p:last-of-type:after {
+      content: close-quote; }
+  /* line 57, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/base/base.quotes */
+  blockquote q {
+    quotes: "‘" "’"; }
+    /* line 60, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/base/base.quotes */
+    blockquote q:before {
+      content: open-quote; }
+    /* line 64, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/base/base.quotes */
+    blockquote q:after {
+      content: close-quote; }
+
+/**
+ * #OBJECTS
+ */
+/*------------------------------------*\
+    #WRAPPERS
+\*------------------------------------*/
+/* line 5, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/objects/objects.wrappers */
+.wrapper {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding-right: 12px;
+  padding-left: 12px; }
+  @media screen and (min-width: 45em) {
+    .wrapper {
+      padding-right: 24px;
+      padding-left: 24px; } }
+
+/**
+ * This is a bit of a magic number; a wrapper this wide will allow us to ‘hang’
+ * one icon out of the rest of the page’s ‘grid’. It is used primarily on the
+ * home page promo boxes.
+ */
+/* line 23, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/objects/objects.wrappers */
+.wrapper--wide {
+  max-width: 1276px; }
+
+/*------------------------------------*\
+    #BUTTONS
+\*------------------------------------*/
+/**
+ * A simple button object.
+ */
+/**
+ * 1. Allow us to style box model properties.
+ * 2. Line different sized buttons up a little nicer.
+ * 3. Make buttons inherit font styles (often necessary when styling `input`s as
+ *    buttons).
+ * 4. Reset/normalize some styles.
+ * 5. Force all button-styled elements to appear clickable.
+ * 6. Fixes odd inner spacing in IE7.
+ * 7. Subtract the border size from the padding value so that buttons do not
+ *    grow larger as we add borders.
+ */
+/* line 51, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-buttons/objects.buttons */
+.btn {
+  display: inline-block;
+  /* [1] */
+  vertical-align: middle;
+  /* [2] */
+  font: inherit;
+  /* [3] */
+  text-align: center;
+  /* [4] */
+  margin: 0;
+  /* [4] */
+  cursor: pointer;
+  /* [5] */
+  overflow: visible;
+  /* [6] */
+  padding: 11px 23px;
+  /* [7] */
+  background-color: #4a8ec2;
+  border: 1px solid #4a8ec2; }
+  /* line 75, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-buttons/objects.buttons */
+  .btn, .btn:hover, .btn:active, .btn:focus {
+    text-decoration: none;
+    /* [4] */
+    color: #fff; }
+
+/**
+ * Fix a Firefox bug whereby `input type="submit"` gains 2px extra padding.
+ */
+/* line 85, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-buttons/objects.buttons */
+.btn::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/*------------------------------------*\
+    #LAYOUT
+\*------------------------------------*/
+/**
+ * The inuitcss layout system uses `box-sizing: border-box;` and
+ * `display: inline-block;` to create an extremely powerful, flexible
+ * alternative to the traditional grid system. Combine the layout items with
+ * the widths found in `trumps.widths`.
+ */
+/**
+ * Begin a layout group.
+ */
+/* line 49, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-layout/objects.layout */
+.layout {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-left: -24px; }
+
+/**
+     * 1. Cause columns to stack side-by-side.
+     * 2. Space columns apart.
+     * 3. Align columns to the tops of each other.
+     * 4. Full-width unless told to behave otherwise.
+     * 5. Required to combine fluid widths and fixed gutters.
+     */
+/* line 63, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-layout/objects.layout */
+.layout__item {
+  display: inline-block;
+  /* [1] */
+  padding-left: 24px;
+  /* [2] */
+  vertical-align: top;
+  /* [3] */
+  width: 100%
+  /* [4] */ }
+
+/*------------------------------------*\
+    #MEDIA
+\*------------------------------------*/
+/**
+ * Place any image- and text-like content side-by-side, as per:
+ * stubbornella.org/content/2010/06/25/the-media-object-saves-hundreds-of-lines-of-code
+ */
+/* line 32, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-media/objects.media */
+.media {
+  display: block; }
+
+/* line 37, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-media/objects.media */
+.media__img {
+  float: left;
+  margin-right: 24px; }
+  /* line 41, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-media/objects.media */
+  .media__img > img {
+    display: block; }
+
+/* line 47, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-media/objects.media */
+.media__body {
+  overflow: hidden;
+  display: block; }
+  /* line 52, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-media/objects.media */
+  .media__body, .media__body > :last-child {
+    margin-bottom: 0; }
+
+/*------------------------------------*\
+    #LIST-UI
+\*------------------------------------*/
+/**
+ * The UI list object creates blocky list items with a keyline separator out of
+ * a `ul` or `ol`.
+ */
+/* line 28, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-list-ui/objects.list-ui */
+.list-ui, .list-ui__item, .list-ui > li {
+  border: 0 solid #ccc; }
+
+/* line 32, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-list-ui/objects.list-ui */
+.list-ui {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top-width: 1px; }
+
+/* line 44, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-list-ui/objects.list-ui */
+.list-ui__item, .list-ui > li {
+  padding: 24px;
+  border-bottom-width: 1px; }
+
+/**
+ * Quick, inline extension of the inuitcss list-ui object.
+ */
+/**
+ * #COMPONENTS
+ */
+/* line 4, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/components/components.site-header.scss */
+.site-header {
+  border-style: solid;
+  border-width: 6px 0 1px;
+  border-top-color: #f43059;
+  border-bottom-color: #f2f2f2;
+  background-color: #fff; }
+
+/* line 16, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/components/components.site-header.scss */
+.site-branding {
+  width: 300px;
+  float: left; }
+
+/* line 21, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/components/components.site-header.scss */
+.site-title, .site-description {
+  margin: 0; }
+
+/* line 25, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/components/components.site-header.scss */
+.site-title {
+  font-size: 18px;
+  font-size: 1.125rem;
+  line-height: 1.333333333;
+  text-transform: uppercase; }
+
+/* line 30, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/components/components.site-header.scss */
+.site-description {
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  font-style: italic; }
+
+/* Navigation */
+/* line 37, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/components/components.site-header.scss */
+.menu-toggle {
+  display: none; }
+
+/* line 1, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/components/components.site-nav.scss */
+.main-navigation {
+  width: 800px;
+  float: left; }
+
+/* line 6, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/components/components.site-nav.scss */
+.primary_navigation {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  /* line 11, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/components/components.site-nav.scss */
+  .primary_navigation li {
+    display: inline-block; }
+    /* line 14, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/components/components.site-nav.scss */
+    .primary_navigation li a {
+      color: #333;
+      padding: 10px 16px; }
+
+/* line 24, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/components/components.site-nav.scss */
+.dropdown-menu {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  /* line 29, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/components/components.site-nav.scss */
+  .dropdown-menu li {
+    display: none; }
+
+/**
+ * #TRUMPS
+ */
+/*------------------------------------*\
+    #CLEARFIX
+\*------------------------------------*/
+/**
+ * Micro clearfix, as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+ * Extend the clearfix class with Sass to avoid the `.clearfix` class appearing
+ * over and over in your markup.
+ */
+/* line 13, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-clearfix/trumps.clearfix */
+.clearfix:after, .media:after {
+  content: "";
+  display: table;
+  clear: both; }
+
+/*------------------------------------*\
+    #WIDTHS
+\*------------------------------------*/
+/**
+ * A series of width helper classes that you can use to size things like grid
+ * systems. Classes can take a fraction-like format (e.g. `.u-2/3`) or a spoken-
+ * word format (e.g. `.u-2-of-3`). Use these in your markup:
+ *
+ * <div class="u-7/12">
+ */
+/* line 34, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-tools-widths/tools.widths */
+.u-1\/1 {
+  width: 100% !important; }
+
+/* line 43, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-tools-widths/tools.widths */
+.u-1\/2 {
+  width: 50% !important; }
+
+/* line 43, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-tools-widths/tools.widths */
+.u-1\/3 {
+  width: 33.333333333% !important; }
+
+/* line 43, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-tools-widths/tools.widths */
+.u-2\/3 {
+  width: 66.666666667% !important; }
+
+/* line 43, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-tools-widths/tools.widths */
+.u-1\/4 {
+  width: 25% !important; }
+
+/* line 43, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-tools-widths/tools.widths */
+.u-2\/4 {
+  width: 50% !important; }
+
+/* line 43, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-tools-widths/tools.widths */
+.u-3\/4 {
+  width: 75% !important; }
+
+/* line 43, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-tools-widths/tools.widths */
+.u-1\/5 {
+  width: 20% !important; }
+
+/* line 43, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-tools-widths/tools.widths */
+.u-2\/5 {
+  width: 40% !important; }
+
+/* line 43, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-tools-widths/tools.widths */
+.u-3\/5 {
+  width: 60% !important; }
+
+/* line 43, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/vendor/inuit-tools-widths/tools.widths */
+.u-4\/5 {
+  width: 80% !important; }
+
+/*------------------------------------*\
+    #WIDTHS-RESPONSIVE
+\*------------------------------------*/
+/**
+ * Some simple, crude, starting-point widths to use alongside the layout system.
+ */
+@media screen and (max-width: 44.9375em) {
+  /* line 10, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .palm-one-whole {
+    width: 100%; }
+
+  /* line 12, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .palm-one-half {
+    width: 50%; }
+
+  /* line 14, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .palm-one-third {
+    width: 33.333333333%; }
+
+  /* line 15, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .palm-two-thirds {
+    width: 66.666666666%; }
+
+  /* line 17, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .palm-one-quarter {
+    width: 25%; }
+
+  /* line 18, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .palm-three-quarters {
+    width: 75%; }
+
+  /* line 20, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .palm-one-fifth {
+    width: 20%; }
+
+  /* line 21, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .palm-two-fifths {
+    width: 40%; }
+
+  /* line 22, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .palm-three-fifths {
+    width: 60%; }
+
+  /* line 23, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .palm-four-fifths {
+    width: 80%; }
+
+  /* line 25, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .palm-one-tenth {
+    width: 10%; }
+
+  /* line 26, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .palm-three-tenths {
+    width: 30%; }
+
+  /* line 27, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .palm-seven-tenths {
+    width: 70%; }
+
+  /* line 28, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .palm-nine-tenths {
+    width: 90%; }
+ }
+
+@media screen and (min-width: 45em) and (max-width: 63.9375em) {
+  /* line 38, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .lap-one-whole {
+    width: 100%; }
+
+  /* line 40, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .lap-one-half {
+    width: 50%; }
+
+  /* line 42, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .lap-one-third {
+    width: 33.333333333%; }
+
+  /* line 43, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .lap-two-thirds {
+    width: 66.666666666%; }
+
+  /* line 45, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .lap-one-quarter {
+    width: 25%; }
+
+  /* line 46, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .lap-three-quarters {
+    width: 75%; }
+
+  /* line 48, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .lap-one-fifth {
+    width: 20%; }
+
+  /* line 49, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .lap-two-fifths {
+    width: 40%; }
+
+  /* line 50, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .lap-three-fifths {
+    width: 60%; }
+
+  /* line 51, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .lap-four-fifths {
+    width: 80%; }
+
+  /* line 53, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .lap-one-tenth {
+    width: 10%; }
+
+  /* line 54, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .lap-three-tenths {
+    width: 30%; }
+
+  /* line 55, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .lap-seven-tenths {
+    width: 70%; }
+
+  /* line 56, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .lap-nine-tenths {
+    width: 90%; }
+ }
+
+@media screen and (min-width: 45em) {
+  /* line 66, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .lap-and-up-one-whole {
+    width: 100%; }
+
+  /* line 68, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .lap-and-up-one-half {
+    width: 50%; }
+
+  /* line 70, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .lap-and-up-one-third {
+    width: 33.333333333%; }
+
+  /* line 71, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .lap-and-up-two-thirds {
+    width: 66.666666666%; }
+
+  /* line 73, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .lap-and-up-one-quarter {
+    width: 25%; }
+
+  /* line 74, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .lap-and-up-three-quarters {
+    width: 75%; }
+
+  /* line 76, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .lap-and-up-one-fifth {
+    width: 20%; }
+
+  /* line 77, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .lap-and-up-two-fifths {
+    width: 40%; }
+
+  /* line 78, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .lap-and-up-three-fifths {
+    width: 60%; }
+
+  /* line 79, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .lap-and-up-four-fifths {
+    width: 80%; }
+
+  /* line 81, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .lap-and-up-one-tenth {
+    width: 10%; }
+
+  /* line 82, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .lap-and-up-three-tenths {
+    width: 30%; }
+
+  /* line 83, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .lap-and-up-seven-tenths {
+    width: 70%; }
+
+  /* line 84, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .lap-and-up-nine-tenths {
+    width: 90%; }
+ }
+
+@media screen and (max-width: 63.9375em) {
+  /* line 94, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .portable-one-whole {
+    width: 100%; }
+
+  /* line 96, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .portable-one-half {
+    width: 50%; }
+
+  /* line 98, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .portable-one-third {
+    width: 33.333333333%; }
+
+  /* line 99, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .portable-two-thirds {
+    width: 66.666666666%; }
+
+  /* line 101, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .portable-one-quarter {
+    width: 25%; }
+
+  /* line 102, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .portable-three-quarters {
+    width: 75%; }
+
+  /* line 104, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .portable-one-fifth {
+    width: 20%; }
+
+  /* line 105, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .portable-two-fifths {
+    width: 40%; }
+
+  /* line 106, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .portable-three-fifths {
+    width: 60%; }
+
+  /* line 107, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .portable-four-fifths {
+    width: 80%; }
+
+  /* line 109, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .portable-one-tenth {
+    width: 10%; }
+
+  /* line 110, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .portable-three-tenths {
+    width: 30%; }
+
+  /* line 111, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .portable-seven-tenths {
+    width: 70%; }
+
+  /* line 112, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .portable-nine-tenths {
+    width: 90%; }
+ }
+
+@media screen and (min-width: 64em) {
+  /* line 122, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .desk-one-whole {
+    width: 100%; }
+
+  /* line 124, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .desk-one-half {
+    width: 50%; }
+
+  /* line 126, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .desk-one-third {
+    width: 33.333333333%; }
+
+  /* line 127, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .desk-two-thirds {
+    width: 66.666666666%; }
+
+  /* line 129, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .desk-one-quarter {
+    width: 25%; }
+
+  /* line 130, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .desk-three-quarters {
+    width: 75%; }
+
+  /* line 132, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .desk-one-fifth {
+    width: 20%; }
+
+  /* line 133, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .desk-two-fifths {
+    width: 40%; }
+
+  /* line 134, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .desk-three-fifths {
+    width: 60%; }
+
+  /* line 135, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .desk-four-fifths {
+    width: 80%; }
+
+  /* line 137, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .desk-one-tenth {
+    width: 10%; }
+
+  /* line 138, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .desk-three-tenths {
+    width: 30%; }
+
+  /* line 139, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .desk-seven-tenths {
+    width: 70%; }
+
+  /* line 140, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .desk-nine-tenths {
+    width: 90%; }
+
+  /* line 142, /Users/chinara/Documents/Websites/www.taptester.dev/wp-content/themes/spring/assets/sass/trumps.widths-responsive */
+  .desk-push-one-tenth {
+    position: relative;
+    left: 10%; }
+ }
+/*# sourceMappingURL=main.css.map */

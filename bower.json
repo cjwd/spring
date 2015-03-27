@@ -1,0 +1,45 @@
+{
+  "name": "spring-starter-theme",
+  "version": "0.1.0",
+  "authors": [
+    "cjwd <chinarakinda@gmail.com>"
+  ],
+  "description": "A WordPress starter themes based on _s, roots/sage and powered by inuitcss and bower",
+  "main": "assets/css/main.css",
+  "moduleType": [
+    "amd"
+  ],
+  "license": "MIT",
+  "homepage": "http://chinarajames.com",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "assets/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "inuit-starter-kit": "latest",
+    "inuit-responsive-settings": "latest",
+    "inuit-responsive-tools": "latest",
+    "inuit-widths-responsive": "latest",
+    "inuit-reset": "latest",
+    "inuit-shared": "latest",
+    "inuit-headings": "latest",
+    "inuit-paragraphs": "latest",
+    "inuit-lists": "latest",
+    "inuit-images": "latest",
+    "inuit-page": "latest",
+    "inuit-buttons": "latest",
+    "inuit-layout": "latest",
+    "inuit-media": "latest",
+    "inuit-list-bare": "latest",
+    "inuit-list-block": "latest",
+    "inuit-list-inline": "latest",
+    "inuit-list-ui": "latest",
+    "inuit-tables": "latest",
+    "inuit-clearfix": "latest"
+  }
+}
