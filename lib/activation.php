@@ -1,4 +1,7 @@
 <?php
+
+namespace Spring\Activation;
+
 /**
  * Theme activation
  */
@@ -7,29 +10,29 @@ if (is_admin() && isset($_GET['activated']) && 'themes.php' == $GLOBALS['pagenow
   exit;
 }
 
-function roots_theme_activation_options_init() {
+function spring_theme_activation_options_init() {
   register_setting(
-    'roots_activation_options',
-    'roots_theme_activation_options'
+    'spring_activation_options',
+    'spring_theme_activation_options'
   );
 }
-add_action('admin_init', 'roots_theme_activation_options_init');
+add_action('admin_init', 'spring_theme_activation_options_init');
 
-function roots_activation_options_page_capability() {
+function spring_activation_options_page_capability() {
   return 'edit_theme_options';
 }
-add_filter('option_page_capability_roots_activation_options', 'roots_activation_options_page_capability');
+add_filter('option_page_capability_spring_activation_options', 'spring_activation_options_page_capability');
 
-function roots_theme_activation_options_add_page() {
-  $roots_activation_options = roots_get_theme_activation_options();
+function spring_theme_activation_options_add_page() {
+  $spring_activation_options = spring_get_theme_activation_options();
 
-  if (!$roots_activation_options) {
+  if (!$spring_activation_options) {
     add_theme_page(
-      __('Theme Activation', 'roots'),
-      __('Theme Activation', 'roots'),
+      __('Theme Activation', 'spring'),
+      __('Theme Activation', 'spring'),
       'edit_theme_options',
       'theme_activation_options',
-      'roots_theme_activation_options_render_page'
+      'spring_theme_activation_options_render_page'
     );
   } else {
     if (is_admin() && isset($_GET['page']) && $_GET['page'] === 'theme_activation_options') {
@@ -39,68 +42,68 @@ function roots_theme_activation_options_add_page() {
     }
   }
 }
-add_action('admin_menu', 'roots_theme_activation_options_add_page', 50);
+add_action('admin_menu', 'spring_theme_activation_options_add_page', 50);
 
-function roots_get_theme_activation_options() {
-  return get_option('roots_theme_activation_options');
+function spring_get_theme_activation_options() {
+  return get_option('spring_theme_activation_options');
 }
 
-function roots_theme_activation_options_render_page() { ?>
+function spring_theme_activation_options_render_page() { ?>
   <div class="wrap">
-    <h2><?php printf(__('%s Theme Activation', 'roots'), wp_get_theme()); ?></h2>
+    <h2><?php printf(__('%s Theme Activation', 'spring'), wp_get_theme()); ?></h2>
     <div class="update-nag">
-      <?php _e('These settings are optional and should usually be used only on a fresh installation', 'roots'); ?>
+      <?php _e('These settings are optional and should usually be used only on a fresh installation', 'spring'); ?>
     </div>
     <?php settings_errors(); ?>
 
     <form method="post" action="options.php">
-      <?php settings_fields('roots_activation_options'); ?>
+      <?php settings_fields('spring_activation_options'); ?>
       <table class="form-table">
-        <tr valign="top"><th scope="row"><?php _e('Create static front page?', 'roots'); ?></th>
+        <tr valign="top"><th scope="row"><?php _e('Create static front page?', 'spring'); ?></th>
           <td>
             <fieldset>
-              <legend class="screen-reader-text"><span><?php _e('Create static front page?', 'roots'); ?></span></legend>
-              <select name="roots_theme_activation_options[create_front_page]" id="create_front_page">
-                <option selected="selected" value="true"><?php echo _e('Yes', 'roots'); ?></option>
-                <option value="false"><?php echo _e('No', 'roots'); ?></option>
+              <legend class="screen-reader-text"><span><?php _e('Create static front page?', 'spring'); ?></span></legend>
+              <select name="spring_theme_activation_options[create_front_page]" id="create_front_page">
+                <option selected="selected" value="true"><?php echo _e('Yes', 'spring'); ?></option>
+                <option value="false"><?php echo _e('No', 'spring'); ?></option>
               </select>
-              <p class="description"><?php printf(__('Create a page called Home and set it to be the static front page', 'roots')); ?></p>
+              <p class="description"><?php printf(__('Create a page called Home and set it to be the static front page', 'spring')); ?></p>
             </fieldset>
           </td>
         </tr>
-        <tr valign="top"><th scope="row"><?php _e('Change permalink structure?', 'roots'); ?></th>
+        <tr valign="top"><th scope="row"><?php _e('Change permalink structure?', 'spring'); ?></th>
           <td>
             <fieldset>
-              <legend class="screen-reader-text"><span><?php _e('Update permalink structure?', 'roots'); ?></span></legend>
-              <select name="roots_theme_activation_options[change_permalink_structure]" id="change_permalink_structure">
-                <option selected="selected" value="true"><?php echo _e('Yes', 'roots'); ?></option>
-                <option value="false"><?php echo _e('No', 'roots'); ?></option>
+              <legend class="screen-reader-text"><span><?php _e('Update permalink structure?', 'spring'); ?></span></legend>
+              <select name="spring_theme_activation_options[change_permalink_structure]" id="change_permalink_structure">
+                <option selected="selected" value="true"><?php echo _e('Yes', 'spring'); ?></option>
+                <option value="false"><?php echo _e('No', 'spring'); ?></option>
               </select>
-              <p class="description"><?php printf(__('Change permalink structure to /&#37;postname&#37;/', 'roots')); ?></p>
+              <p class="description"><?php printf(__('Change permalink structure to /&#37;postname&#37;/', 'spring')); ?></p>
             </fieldset>
           </td>
         </tr>
-        <tr valign="top"><th scope="row"><?php _e('Create navigation menu?', 'roots'); ?></th>
+        <tr valign="top"><th scope="row"><?php _e('Create navigation menu?', 'spring'); ?></th>
           <td>
             <fieldset>
-              <legend class="screen-reader-text"><span><?php _e('Create navigation menu?', 'roots'); ?></span></legend>
-              <select name="roots_theme_activation_options[create_navigation_menus]" id="create_navigation_menus">
-                <option selected="selected" value="true"><?php echo _e('Yes', 'roots'); ?></option>
-                <option value="false"><?php echo _e('No', 'roots'); ?></option>
+              <legend class="screen-reader-text"><span><?php _e('Create navigation menu?', 'spring'); ?></span></legend>
+              <select name="spring_theme_activation_options[create_navigation_menus]" id="create_navigation_menus">
+                <option selected="selected" value="true"><?php echo _e('Yes', 'spring'); ?></option>
+                <option value="false"><?php echo _e('No', 'spring'); ?></option>
               </select>
-              <p class="description"><?php printf(__('Create the Primary Navigation menu and set the location', 'roots')); ?></p>
+              <p class="description"><?php printf(__('Create the Primary Navigation menu and set the location', 'spring')); ?></p>
             </fieldset>
           </td>
         </tr>
-        <tr valign="top"><th scope="row"><?php _e('Add pages to menu?', 'roots'); ?></th>
+        <tr valign="top"><th scope="row"><?php _e('Add pages to menu?', 'spring'); ?></th>
           <td>
             <fieldset>
-              <legend class="screen-reader-text"><span><?php _e('Add pages to menu?', 'roots'); ?></span></legend>
-              <select name="roots_theme_activation_options[add_pages_to_primary_navigation]" id="add_pages_to_primary_navigation">
-                <option selected="selected" value="true"><?php echo _e('Yes', 'roots'); ?></option>
-                <option value="false"><?php echo _e('No', 'roots'); ?></option>
+              <legend class="screen-reader-text"><span><?php _e('Add pages to menu?', 'spring'); ?></span></legend>
+              <select name="spring_theme_activation_options[add_pages_to_primary_navigation]" id="add_pages_to_primary_navigation">
+                <option selected="selected" value="true"><?php echo _e('Yes', 'spring'); ?></option>
+                <option value="false"><?php echo _e('No', 'spring'); ?></option>
               </select>
-              <p class="description"><?php printf(__('Add all current published pages to the Primary Navigation', 'roots')); ?></p>
+              <p class="description"><?php printf(__('Add all current published pages to the Primary Navigation', 'spring')); ?></p>
             </fieldset>
           </td>
         </tr>
@@ -111,8 +114,8 @@ function roots_theme_activation_options_render_page() { ?>
 
 <?php }
 
-function roots_theme_activation_action() {
-  if (!($roots_theme_activation_options = roots_get_theme_activation_options())) {
+function spring_theme_activation_action() {
+  if (!($spring_theme_activation_options = spring_get_theme_activation_options())) {
     return;
   }
 
@@ -120,10 +123,10 @@ function roots_theme_activation_action() {
     return;
   }
 
-  if ($roots_theme_activation_options['create_front_page'] === 'true') {
-    $roots_theme_activation_options['create_front_page'] = false;
+  if ($spring_theme_activation_options['create_front_page'] === 'true') {
+    $spring_theme_activation_options['create_front_page'] = false;
 
-    $default_pages = array(__('Home', 'roots'));
+    $default_pages = array(__('Home', 'spring'));
     $existing_pages = get_pages();
     $temp = array();
 
@@ -144,7 +147,7 @@ function roots_theme_activation_action() {
       wp_insert_post($add_default_pages);
     }
 
-    $home = get_page_by_title(__('Home', 'roots'));
+    $home = get_page_by_title(__('Home', 'spring'));
     update_option('show_on_front', 'page');
     update_option('page_on_front', $home->ID);
 
@@ -155,8 +158,8 @@ function roots_theme_activation_action() {
     wp_update_post($home_menu_order);
   }
 
-  if ($roots_theme_activation_options['change_permalink_structure'] === 'true') {
-    $roots_theme_activation_options['change_permalink_structure'] = false;
+  if ($spring_theme_activation_options['change_permalink_structure'] === 'true') {
+    $spring_theme_activation_options['change_permalink_structure'] = false;
 
     if (get_option('permalink_structure') !== '/%postname%/') {
       global $wp_rewrite;
@@ -165,29 +168,29 @@ function roots_theme_activation_action() {
     }
   }
 
-  if ($roots_theme_activation_options['create_navigation_menus'] === 'true') {
-    $roots_theme_activation_options['create_navigation_menus'] = false;
+  if ($spring_theme_activation_options['create_navigation_menus'] === 'true') {
+    $spring_theme_activation_options['create_navigation_menus'] = false;
 
-    $roots_nav_theme_mod = false;
+    $spring_nav_theme_mod = false;
 
-    $primary_nav = wp_get_nav_menu_object(__('Primary Navigation', 'roots'));
+    $primary_nav = wp_get_nav_menu_object(__('Primary Navigation', 'spring'));
 
     if (!$primary_nav) {
-      $primary_nav_id = wp_create_nav_menu(__('Primary Navigation', 'roots'), array('slug' => 'primary_navigation'));
-      $roots_nav_theme_mod['primary_navigation'] = $primary_nav_id;
+      $primary_nav_id = wp_create_nav_menu(__('Primary Navigation', 'spring'), array('slug' => 'primary_navigation'));
+      $spring_nav_theme_mod['primary_navigation'] = $primary_nav_id;
     } else {
-      $roots_nav_theme_mod['primary_navigation'] = $primary_nav->term_id;
+      $spring_nav_theme_mod['primary_navigation'] = $primary_nav->term_id;
     }
 
-    if ($roots_nav_theme_mod) {
-      set_theme_mod('nav_menu_locations', $roots_nav_theme_mod);
+    if ($spring_nav_theme_mod) {
+      set_theme_mod('nav_menu_locations', $spring_nav_theme_mod);
     }
   }
 
-  if ($roots_theme_activation_options['add_pages_to_primary_navigation'] === 'true') {
-    $roots_theme_activation_options['add_pages_to_primary_navigation'] = false;
+  if ($spring_theme_activation_options['add_pages_to_primary_navigation'] === 'true') {
+    $spring_theme_activation_options['add_pages_to_primary_navigation'] = false;
 
-    $primary_nav = wp_get_nav_menu_object(__('Primary Navigation', 'roots'));
+    $primary_nav = wp_get_nav_menu_object(__('Primary Navigation', 'spring'));
     $primary_nav_term_id = (int) $primary_nav->term_id;
     $menu_items= wp_get_nav_menu_items($primary_nav_term_id);
 
@@ -205,11 +208,11 @@ function roots_theme_activation_action() {
     }
   }
 
-  update_option('roots_theme_activation_options', $roots_theme_activation_options);
+  update_option('spring_theme_activation_options', $spring_theme_activation_options);
 }
-add_action('admin_init','roots_theme_activation_action');
+add_action('admin_init','spring_theme_activation_action');
 
-function roots_deactivation() {
-  delete_option('roots_theme_activation_options');
+function spring_deactivation() {
+  delete_option('spring_theme_activation_options');
 }
-add_action('switch_theme', 'roots_deactivation');
+add_action('switch_theme', 'spring_deactivation');

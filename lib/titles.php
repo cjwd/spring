@@ -9,12 +9,12 @@ function title() {
     if (get_option('page_for_posts', true)) {
       return get_the_title(get_option('page_for_posts', true));
     } else {
-      return __('Latest Posts', 'roots');
+      return __('Latest Posts', 'spring');
     }
   } elseif (is_archive()) {
     return get_the_archive_title();
   } elseif (is_search()) {
-    return sprintf(__('Search Results for %s', 'roots'), get_search_query());
+    return sprintf(__('Search Results for %s', 'spring'), get_search_query());
   } elseif (is_404()) {
     return __('Not Found', 'spring');
   } else {
