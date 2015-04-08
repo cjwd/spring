@@ -1,6 +1,6 @@
 <?php
 
-namespace Spring\Activation;
+//namespace Spring\Activation;
 
 /**
  * Theme activation
