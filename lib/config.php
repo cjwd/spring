@@ -9,17 +9,11 @@ use Spring\SpringSidebar;
  */
 add_theme_support('soil-clean-up');         // Enable clean up from Soil
 add_theme_support('soil-relative-urls');    // Enable relative URLs from Soil
-add_theme_support('soil-nice-search');      // Enable /?s= to /search/ redirect from Soil
+add_theme_support('soil-nice-search');      // Enable nice search from Soil
+add_theme_support('soil-jquery-cdn');       // Enable to load jQuery from the Google CDN
+add_theme_support('soil-google-analytics', 'UA-XXXXX-Y');
 //add_theme_support('bootstrap-gallery');     // Enable Bootstrap's thumbnails component on [gallery]
-add_theme_support('jquery-cdn');            // Enable to load jQuery from the Google CDN
 
-/**
- * Configuration values
- */
-if (!defined('GOOGLE_ANALYTICS_ID')) {
-  // Format: UA-XXXXX-Y (Note: Universal Analytics only)
-  define('GOOGLE_ANALYTICS_ID', '');
-}
 
 if (!defined('WP_ENV')) {
   // Fallback if WP_ENV isn't defined in your WordPress config
