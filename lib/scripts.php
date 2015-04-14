@@ -23,13 +23,13 @@ function spring_scripts() {
     $assets = array(
       'css'       => '/assets/css/main.css',
       'js'        => '/assets/js/scripts.js',
-      'modernizr' => '/assets/vendor/modernizr/modernizr.js',
+      'modernizr' => '/assets/vendor/modernizr/modernizr.js'
     );
   } else {
     $assets     = array(
       'css'       => '/assets/css/main.min.css?' . $assets['assets/css/main.min.css']['hash'],
       'js'        => '/assets/js/scripts.min.js?' . $assets['assets/js/scripts.min.js']['hash'],
-      'modernizr' => '/assets/js/vendor/modernizr.min.js',
+      'modernizr' => '/assets/js/vendor/modernizr.min.js'
     );
   }
 
@@ -41,6 +41,6 @@ function spring_scripts() {
   }
 
   wp_enqueue_script('modernizr', get_template_directory_uri() . $assets['modernizr'], array(), null, true);
-  wp_enqueue_script('spring_js', get_template_directory_uri() . $assets['js'], array(), null, true);
+  wp_enqueue_script('spring_js', get_template_directory_uri() . $assets['js'], ['jquery'], null, true);
 }
 add_action('wp_enqueue_scripts', 'spring_scripts', 100);
